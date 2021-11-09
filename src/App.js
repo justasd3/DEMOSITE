@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router';
+import Footer from './component/Footer';
+import Header from './component/Header';
+import Main from './component/Main';
+import Services from './component/Services';
+import './styles/style.scss';
 
-function App() {
+const App = ({ history }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ConnectedRouter history={history}>
+        <Header />
+        <Switch>
+          <Route path="/Home">
+            <Main />
+          </Route>
+          <Route path="/Services">
+            <Services />
+          </Route>
+        </Switch>
+        <Footer />
+      </ConnectedRouter>
+    </>
   );
-}
+};
 
 export default App;

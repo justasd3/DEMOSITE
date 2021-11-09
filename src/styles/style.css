@@ -1,0 +1,169 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  text-decoration: none;
+}
+
+* .container {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+}
+
+.nav {
+  background-color: lightblue;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav .logo {
+  font-size: 20px;
+}
+
+.nav .container .menu-icon {
+  display: none;
+}
+
+.nav .container .nav-menu {
+  display: none;
+}
+
+.nav .container ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+}
+
+.nav .container ul li:hover > ul {
+  display: block;
+}
+
+.nav .container ul li:hover > ul:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 40px;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.nav .container ul li {
+  font-size: 12px;
+  height: 30px;
+  position: relative;
+  padding: 0 7px;
+  margin-bottom: 5px;
+}
+
+.nav .container ul li a {
+  color: white;
+}
+
+.nav .container ul li ul {
+  background: black;
+  display: none;
+  min-width: 100px;
+  position: absolute;
+  left: -20px;
+  top: 25px;
+}
+
+.nav .container ul li ul li {
+  height: auto;
+  width: auto;
+}
+
+.nav .container ul li ul li:hover {
+  background: white;
+}
+
+.nav .container ul li ul li:hover a {
+  color: black;
+}
+
+.nav .container ul li ul li:first-child {
+  margin-top: 10px;
+}
+
+.content {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .container {
+  background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav .container .logo {
+    padding-left: 15px;
+  }
+  .nav .container .nav-links {
+    display: none;
+  }
+  .nav .container .menu-icon {
+    display: block;
+    padding-right: 15px;
+  }
+  .nav .container .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .nav .container .nav-menu.active {
+    position: absolute;
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav .container .nav-menu.active li a {
+    font-size: 40px;
+  }
+  .nav .container .nav-menu.active li p {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
