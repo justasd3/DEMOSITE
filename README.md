@@ -2,7 +2,7 @@
 
 Responsive Demosite website with Redux, SCSS, ES6.
 Weather banner taken dynamically and mapped using conditionCode from https://api.meteo.lt/.
-Urls are stored.
+Urls are stored in state.
 
 ## Desktop
 ![image](https://user-images.githubusercontent.com/61118821/144833014-44674dc2-e5cf-4037-8d95-ec940e64b5ef.png)
